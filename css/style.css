@@ -1,1 +1,228 @@
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin: 0;
+}
 
+h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 30px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.location {
+  background-color: #eaeaea;
+  height: 50px;
+  text-align: center;
+  box-shadow: #cecece 0px 3px 3px inset;
+}
+.location__city {
+  font-weight: bold;
+  border: 0;
+  color: #353535;
+  background: transparent;
+  padding: 15px 0;
+}
+
+form i {
+  color: #353535;
+  margin-right: 10px;
+}
+
+.explorer {
+  width: 100%;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  padding: 30px 0;
+  background: #f6f6f6;
+}
+.explorer h2 {
+  font-size: 26px;
+  font-weight: 800;
+  padding: 0 35px;
+}
+.explorer p {
+  font-size: 18px;
+  padding: 0 25px;
+}
+.explorer__btn {
+  width: 230px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(175deg, #FF79DA 10%, #9356DC 90%);
+  opacity: 1;
+  box-shadow: 0 3px 10px #828282;
+  border-radius: 50px;
+  font-weight: 400;
+  border: 0;
+  margin: 10px 0;
+}
+.explorer__btn:hover {
+  opacity: 0.9;
+  box-shadow: 0px 5px 10px #696969;
+}
+
+.work h2 {
+  font-size: 26px;
+  font-weight: 800;
+  margin: 40px 0 20px 20px;
+}
+.work__block {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  width: 90%;
+  background-color: #f6f6f6;
+  box-shadow: 0 2px 8px #dbdbdb;
+  border-radius: 15px;
+  margin: 20px 0 20px 30px;
+}
+.work__block-number {
+  position: absolute;
+  top: 21px;
+  left: -13px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: #9356dc;
+  border-radius: 100%;
+}
+.work__block-content {
+  display: flex;
+  align-items: center;
+  margin-left: 35px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.work i {
+  margin-right: 25px;
+  color: #353535;
+}
+
+.link__card {
+  text-decoration: none;
+  color: black;
+}
+
+.restaurant {
+  background-color: #f6f6f6;
+  height: auto;
+  width: 100%;
+  padding-bottom: 60px;
+  margin: 50px 0 0 0;
+}
+.restaurant h2 {
+  font-size: 26px;
+  font-weight: 800;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-left: 5%;
+}
+.restaurant h3 {
+  font-size: 18px;
+}
+.restaurant p {
+  font-size: 18px;
+}
+.restaurant__card {
+  position: relative;
+  width: 90%;
+  height: 280px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px #828282;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.restaurant__card-image-photo {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 15px 15px 0px 0px;
+  object-fit: cover;
+}
+.restaurant__card-image-new {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 100px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #009470;
+  font-weight: 500;
+  background: #99e2d0;
+  border-radius: 3px;
+}
+.restaurant__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 16px 15px;
+}
+
+.restaurant__info-hearth {
+  position: relative;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.icon-empty {
+  position: absolute;
+  font-size: 25px;
+  z-index: 1;
+}
+
+.icon-full {
+  position: absolute;
+  font-size: 26px;
+  background-clip: text;
+  color: transparent;
+  background: linear-gradient(#FF79DA, #9356DC);
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.icon-full:hover {
+  opacity: 1;
+}
+
+.footer {
+  background-color: #373737;
+  color: white;
+  line-height: 25px;
+  font-size: 15px;
+  padding: 20px 0 20px 20px;
+}
+.footer h4 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.footer i {
+  color: white;
+  margin-right: 10px;
+  font-size: 14px;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+}
