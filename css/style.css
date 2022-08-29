@@ -61,7 +61,7 @@ form i {
   justify-content: center;
   color: white;
   text-decoration: none;
-  background: linear-gradient(175deg, #FF79DA 10%, #9356DC 90%);
+  background: linear-gradient(175deg, #ff79da 10%, #9356dc 90%);
   opacity: 1;
   box-shadow: 0 3px 10px #828282;
   border-radius: 50px;
@@ -262,9 +262,9 @@ form i {
   background: linear-gradient(#ff79da, #9356dc);
   background-clip: text;
   -webkit-background-clip: text;
-  z-index: 2;
   opacity: 0;
   transition: opacity 0.5s;
+  z-index: 2;
 }
 .icon-full:hover {
   opacity: 1;
@@ -301,146 +301,175 @@ form i {
 }
 
 /******************************! La palette du gout *****************/
-/*! header */
-.menu__header {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.header__menu {
+  position: relative;
+  font-family: "Shrikhand";
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
-.menu__header i {
-  padding-left: 25px;
-  font-size: 24px;
+.header__menu a {
+  position: absolute;
+  top: 50%;
+  left: 20px;
   color: black;
+  transform: translateY(-50%);
 }
-.menu__header h1 {
-  text-align: center;
-  padding: 15px 0 15px;
+.header__menu i {
+  font-size: 30px;
 }
 
+.banner {
+  width: 100%;
+  height: 250px;
+}
 .banner img {
   width: 100%;
   height: 300px;
   object-fit: cover;
+  background-position: top;
 }
 
-section {
-  background: #f6f6f6;
+.presentation_restaurant {
+  padding: 0px 20px;
+  border-radius: 50px 50px 0 0;
+  overflow: hidden;
 }
 
 .menu {
-  height: 100%;
-  background-color: #f6f6f6;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  padding: 20px 0 20px 0;
-  transform: translateY(-5%);
+  position: relative;
+  padding: 30px 20px 60px;
+  background-color: #f4f4f4;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
 }
 .menu__title {
-  position: relative;
   display: flex;
   justify-content: space-between;
-  padding: 20px 30px 0 30px;
-  margin: 0;
 }
-.menu__title h2 {
-  font-family: "Shrikhand", cursive;
-  font-size: 26px;
-  margin: 10px 0 0 0;
+.menu__title h3 {
+  font-family: "Shrikhand";
+  font-size: 30px;
+}
+.menu .restaurant__info-hearth {
+  right: 30px;
+  padding-left: 50px;
+}
+.menu__display {
+  display: flex;
+  flex-direction: column;
 }
 @media screen and (min-width: 768px) {
   .menu__display {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
   }
 }
 @media screen and (min-width: 992px) {
   .menu__display {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 33% 33% 33%;
+    grid-column-gap: 5px;
   }
 }
-.menu__content h3 {
-  font-size: 18px;
+.menu__content {
+  margin-top: 30px;
+}
+.menu__content h4 {
   text-transform: uppercase;
-  margin: 40px 20px 0 20px;
+  margin-left: 12px;
 }
-.menu__content__border {
+.menu__content h4:after {
+  content: "";
   width: 40px;
-  border-bottom: #99e2d0 3px solid;
-  margin: 5px 0 0 20px;
+  display: block;
+  border-bottom: 3px solid #99e2d0;
+  padding: 5px;
 }
-.menu__card__content {
+.menu__card {
+  position: relative;
+  height: 70px;
   display: flex;
-  background: white;
-  box-shadow: 0 2px 8px #828282;
-  border-radius: 15px;
-  margin: 15px;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px #828282;
   overflow: hidden;
-  animation: transition_apparition 2s ease;
-}
-.menu__card__content:hover .menu__card__check {
-  min-width: 70px;
-  transition-duration: 0.5s;
-  transform: translateX(-60px);
-  border-radius: 0 15px 15px 0;
-}
-.menu__card__content:hover .menu__card__check i {
-  transform: rotate(360deg);
-  transition-duration: 0.5s;
-}
-.menu__card__content:hover .menu__card__price {
-  transition-duration: 0.5s;
-  transform: translateX(-50px);
-}
-.menu__card__content:hover .menu__card__text {
-  width: calc(80% - 70px);
-  padding-right: 40px;
+  padding: 0px 15px;
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  transition: transform 300ms ease;
+  animation: animation-card 500ms both;
+  cursor: pointer;
 }
 .menu__card__text {
-  width: calc(80% - 30px);
-  margin-left: 20px;
-  padding-right: 10px;
+  width: 100%;
   overflow: hidden;
-}
-.menu__card__text h4 {
-  margin: 15px 0 0 0;
+  white-space: nowrap;
+  padding-bottom: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.menu__card__text h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-bottom: 10px;
+}
 .menu__card__text p {
-  margin-top: 5px;
-  margin-bottom: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 .menu__card__price {
-  width: 20%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  margin-bottom: 16px;
+  display: block;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  transition: all 300ms ease-out;
 }
 .menu__card__check {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 75px;
+  height: 70px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #99e2d0;
-  margin-right: -110px;
+  background-color: #99e2d0;
+  transform: translateX(100px);
+  transition: transform 300ms ease-out;
 }
 .menu__card__check i {
-  color: #99e2d0;
-  padding: 5px;
-  border-radius: 50%;
-  background: white;
+  position: absolute;
+  top: 19px;
+  left: 23px;
+  font-size: 30px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-color: white;
+  transition: transform 600ms;
 }
-.menu__command {
+.menu__card:hover .menu__card__price {
+  transform: translateX(-80px);
+  padding-left: 90px;
+}
+.menu__card:hover .menu__card__check {
+  transform: translateX(0px);
+}
+.menu__card:hover .menu__card__check i {
+  transform: rotate(360deg);
+}
+
+.command {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  padding-top: 50px;
 }
-.menu__command__btn {
+.command__btn {
   width: 230px;
   height: 50px;
   display: flex;
@@ -448,7 +477,7 @@ section {
   justify-content: center;
   color: white;
   text-decoration: none;
-  background: linear-gradient(175deg, #FF79DA 10%, #9356DC 90%);
+  background: linear-gradient(175deg, #ff79da 10%, #9356dc 90%);
   opacity: 1;
   box-shadow: 0 3px 10px #828282;
   border-radius: 50px;
@@ -456,38 +485,33 @@ section {
   border: 0;
   margin: 10px 0;
 }
-.menu__command__btn:hover {
+.command__btn:hover {
   opacity: 0.9;
   box-shadow: 0px 5px 10px #696969;
 }
 
-@keyframes transition_apparition {
+@keyframes animation-1 {
   0% {
     opacity: 0;
+    transform: translateY(1);
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
-@keyframes apparition_menu {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
+.animation-1 {
+  opacity: 1;
+  transform: translateY(1);
+  animation: animation-1 0.5s ease-in-out 0.2s both;
 }
-.bloc_menu--animation .animation-1 {
-  -webkit-animation: apparition_menu 100ms ease-in 200ms both;
-  animation: apparition_menu 100ms ease-in 200ms both;
+.animation-2 {
+  opacity: 1;
+  transform: translateY(1);
+  animation: animation-1 0.5s ease-in-out 0.4s both;
 }
-
-.bloc_menu--animation .animation-2 {
-  -webkit-animation: apparition_menu 100ms ease-in 400ms both;
-  animation: apparition_menu 100ms ease-in 400ms both;
-}
-
-.bloc_menu--animation .animation-3 {
-  -webkit-animation: apparition_menu 100ms ease-in 600ms both;
-  animation: apparition_menu 100ms ease-in 600ms both;
+.animation-3 {
+  opacity: 1;
+  transform: translateY(1);
+  animation: animation-1 0.5s ease-in-out 0.6s both;
 }
