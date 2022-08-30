@@ -4,6 +4,56 @@
   margin: 0;
 }
 
+.loader {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 160px;
+  height: 160px;
+  border: transparent solid 10px;
+  border-left-color: #9356dc;
+  border-top-color: #9356dc;
+  border-radius: 100%;
+  background: #696969;
+  background-size: 100%;
+  animation: loading 5s infinite linear;
+}
+.loader:before {
+  position: absolute;
+  content: "";
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  border: transparent solid 10px;
+  border-left-color: #ff79da;
+  border-top-color: #ff79da;
+  border-radius: 100%;
+  animation: loading 2s infinite linear reverse;
+}
+.loader:after {
+  position: absolute;
+  content: "";
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  bottom: 50px;
+  border: transparent solid 10px;
+  border-left-color: #99e2d0;
+  border-top-color: #99e2d0;
+  border-radius: 100%;
+  animation: loading 4s infinite linear;
+}
+
+@keyframes loading {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 /*! header */
 h1 {
   font-family: "Shrikhand", cursive;
