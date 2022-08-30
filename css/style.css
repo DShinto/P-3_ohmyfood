@@ -420,6 +420,7 @@ form i {
 .menu__title h3 {
   font-family: "Shrikhand";
   font-size: 30px;
+  margin-left: 10px;
 }
 .menu .restaurant__info-hearth {
   right: 30px;
