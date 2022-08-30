@@ -5,6 +5,16 @@
 }
 
 .loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #f6f6f6;
+  margin-top: -20px;
+  opacity: 0.9;
+  z-index: 10;
+  animation: loading 2s forwards;
+}
+.loader__spinner {
   position: absolute;
   margin: auto;
   left: 0;
@@ -17,11 +27,10 @@
   border-left-color: #9356dc;
   border-top-color: #9356dc;
   border-radius: 100%;
-  background: #696969;
-  background-size: 100%;
-  animation: loading 5s infinite linear;
+  opacity: 1;
+  animation: loading__spinner 3s infinite linear;
 }
-.loader:before {
+.loader__spinner:before {
   position: absolute;
   content: "";
   top: 20px;
@@ -32,9 +41,9 @@
   border-left-color: #ff79da;
   border-top-color: #ff79da;
   border-radius: 100%;
-  animation: loading 2s infinite linear reverse;
+  animation: loading__spinner 1s infinite linear reverse;
 }
-.loader:after {
+.loader__spinner:after {
   position: absolute;
   content: "";
   top: 50px;
@@ -45,13 +54,22 @@
   border-left-color: #99e2d0;
   border-top-color: #99e2d0;
   border-radius: 100%;
-  animation: loading 4s infinite linear;
+  animation: loading__spinner 2s infinite linear;
 }
 
-@keyframes loading {
-  100% {
+@keyframes loading__spinner {
+  0% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+@keyframes loading {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
   }
 }
 /*! header */
