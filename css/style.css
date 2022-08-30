@@ -330,6 +330,7 @@ form i {
   background: linear-gradient(#ff79da, #9356dc);
   background-clip: text;
   -webkit-background-clip: text;
+  -moz-background-clip: text;
   opacity: 0;
   transition: opacity 0.5s;
   z-index: 2;
