@@ -171,6 +171,12 @@ form i {
   border-radius: 15px;
   margin: 20px 0 20px 30px;
 }
+.work__block:hover {
+  background-color: rgba(147, 86, 220, 0.1);
+}
+.work__block:hover i {
+  color: #9356dc;
+}
 @media screen and (min-width: 768px) {
   .work__block {
     justify-content: center;
@@ -369,7 +375,7 @@ form i {
   color: white;
 }
 
-/******************************! La palette du gout *****************/
+/******************************! Page menu *****************/
 .header__menu {
   position: relative;
   font-family: "Shrikhand";
